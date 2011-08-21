@@ -1,0 +1,117 @@
+body {
+    background-color: #FFFFFF;
+    font: arial,helvetica,clean,sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: #777777;
+}
+
+#thumbnails {
+    opacity: 1;
+    width: 100%;
+    height: 55px;
+    clear: both;
+}
+
+#gallery {
+    opacity: 1;
+    width: 100%;
+    text-align: center;
+    clear: both;
+    height: 350px;
+}
+
+#gallery img{
+    max-width: 550px;
+    max-height: 350px;
+/*     border: 1px solid #ccc; */
+}
+
+#caption {
+    font-size: 0.9em;
+    text-align: center;
+    clear: both;
+}
+
+#caption a {
+    background-image: url("../images/link.gif");
+    background-position: left center;
+    background-repeat: no-repeat;
+    padding-left: 12px;
+}
+
+#note {
+    bottom: 0;
+    position: absolute;
+    width: 90%;
+    font-size: 0.7em;
+}
+
+div.loader {
+    background-image: url("../images/loader.gif");
+    background-position: center center;
+    background-repeat: no-repeat;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    position: absolute;
+    z-index: -10;
+    top: 0;
+}
+
+ul.thumbs {
+    clear: both;
+    margin: 0;
+    padding: 0;
+}
+ul.thumbs li {
+    float: left;
+    padding: 0;
+    margin: 5px 10px 5px 0;
+    list-style: none;
+}
+a.thumb {
+    padding: 2px;
+    display: block;
+    border: 1px solid #ccc;
+}
+
+ul.thumbs li {
+    opacity: 0.67;
+}
+
+ul.thumbs li.selected, ul.thumbs li:hover {
+    opacity: 1;
+}
+
+ul.thumbs li.selected a.thumb {
+    background: #000;
+}
+a.thumb:focus {
+    outline: none;
+}
+ul.thumbs img {
+    border: none;
+    display: block;
+    max-width: 50px;
+    max-height: 50px;
+}
+
+div.controls {
+    margin-top: 10px;
+    clear: both;
+    font-size: 0.9em;
+}
+
+div.ss-controls {
+    float: left;
+}
+
+div.controls a {
+    padding: 10px;
+}
+div.nav-controls {
+    float: right;
+}

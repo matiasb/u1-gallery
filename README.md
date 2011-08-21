@@ -1,0 +1,1 @@
+Add photo gallery view option to Ubuntu One Files.
