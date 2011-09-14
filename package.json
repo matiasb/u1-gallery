@@ -2,7 +2,7 @@
     "name": "u1-gallery", 
     "license": "GPL 3", 
     "author": "Matias Bordese", 
-    "version": "0.1", 
+    "version": "0.1.1", 
     "fullName": "U1 Gallery", 
     "id": "jid1-1bAHfiNjmd3aLQ", 
     "description": "Add photo view gallery option to Ubuntu One Files."

@@ -6,10 +6,15 @@ function update_ui() {
     $('#left_controls').each(function () {
         var file_options = $(this).find('ul');
         if (file_options.find('a.slideshow').length == 0){
-            file_options.append('<li><a class="add-button slideshow">View as gallery</a></li>');
-            $('a.slideshow').css('background-image', 'url("' + gallery_icon + '")');
+            file_options.append($('<li>').append(
+                $('<a>', {class: "add-button slideshow",
+                          text: 'View as gallery'}))
+            );
+            $('a.slideshow').css('background-image',
+                                 'url("' + gallery_icon + '")');
 
-            /* Bind the gallery link to our backend event to show the gallery panel */
+            /* Bind the gallery link to our backend event
+               to show the gallery panel */
             $('a.slideshow').click(function (event) {
                 event.stopPropagation();
                 event.preventDefault();

@@ -2,7 +2,16 @@
 var gallery;
 
 function _new_image(url, f_name) {
-    return '<li><a class="thumb" href="' + url + '" title="' + f_name + '"><img src="#"/></a><div class="caption"><a class="open-image" target="_blank" href="' + url + '">' + f_name + '</a></div></li>';
+    return $('<li>').append(
+                $('<a>', {class: "thumb", href: url, title: f_name}).append(
+                    $('<img>', {src: "#"})
+                )
+            ).append(
+                $('<div>', { class: "caption"}).append(
+                    $('<a>', {class: "open-image", target: "_blank",
+                              href: url, text: f_name})
+                )
+            );
 }
 
 $(window).click(function(event){
@@ -39,7 +48,7 @@ self.on('message', function(message) {
     }
 
     if (files.length == 0){
-        $('#slideshow').html('<p>No images available.</p>');
+        $('#slideshow').append($('<p>').text('No images available.'));
         $('#loading, #caption, #controls').hide();
     }else{
         $('#loading, #caption, #controls').show();
